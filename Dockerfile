@@ -2,7 +2,10 @@ FROM ubuntu
 MAINTAINER Connectify <bprodoehl@connectify.me>
 
 RUN apt-get update -q
-RUN apt-get install -qy supervisor apache2 libapache2-mod-php5 php5-mysql php5-memcache php5-curl wget
+RUN apt-get install -qy supervisor apache2 libapache2-mod-php5 php5-mysql php5-memcache php5-curl wget unzip
+
+# WP wants sendmail
+RUN apt-get install -qy sendmail
 
 ADD /start-apache2.sh /start-apache2.sh
 ADD /run.sh /run.sh
