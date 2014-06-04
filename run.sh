@@ -8,8 +8,11 @@ if [ ! -e /app/index.php ]; then
     cp -rf /wp-download/wordpress/* /app/.
 fi
 
-if [ ! -e /app/wp-config.php ]; then
+# save config, or blow it away?
+#if [ ! -e /app/wp-config.php ]; then
     cp /config/wp-config.php /app/.
-fi
+#fi
+
+chown -R www-data /app
 
 exec supervisord -n -c /etc/supervisor/supervisord.conf
