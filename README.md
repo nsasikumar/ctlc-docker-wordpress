@@ -30,10 +30,16 @@ Done!
 
 Environment variables
 ------------------------
-DB_NAME -- The name of the database for WordPress
-DB_USER -- MySQL database username
-DB_PASSWORD -- MySQL database password
-DB_HOST -- MySQL hostname
+*  DB_NAME -- The name of the database for WordPress
+*  DB_USER -- MySQL database username
+*  DB_PASSWORD -- MySQL database password
+*  DB_HOST -- MySQL hostname
+
 (or alternatively)
-DB_1_PORT_3306_TCP_ADDR
-DB_1_PORT_3306_TCP_PORT
+
+*  DB_1_PORT_3306_TCP_ADDR
+*  DB_1_PORT_3306_TCP_PORT
+
+Changelog
+------------------
+2014-09-08 - Update to WordPress 4.0
