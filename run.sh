@@ -1,5 +1,7 @@
 #!/bin/bash
 
+printenv
+
 if [ ! -d /app ]; then
     mkdir /app
 fi
