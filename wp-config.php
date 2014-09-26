@@ -92,6 +92,27 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
+// ** Multisite settings ** //
+/** Allow multisite */
+if( strlen(getenv("WP_ALLOW_MULTISITE")) > 0 ) {
+  define('WP_ALLOW_MULTISITE', getenv("WP_ALLOW_MULTISITE"));
+  if (getenv("WP_ALLOW_MULTISITE") === true) {
+    if( strlen(getenv("MULTISITE")) > 0 ) {
+      define('MULTISITE', getenv("MULTISITE"));
+    }
+    if( strlen(getenv("SUBDOMAIN")) > 0 ) {
+      define('SUBDOMAIN_INSTALL', getenv("SUBDOMAIN_INSTALL"));
+    }
+    if( strlen(getenv("DOMAIN_CURRENT_SITE")) > 0) {
+      define('DOMAIN_CURRENT_SITE', getenv("DOMAIN_CURRENT_SITE"));
+    }
+    define('PATH_CURRENT_SITE', '/');
+    define('SITE_ID_CURRENT_SITE', 1);
+    define('BLOG_ID_CURRENT_SITE', 1);
+  }
+}
+
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
