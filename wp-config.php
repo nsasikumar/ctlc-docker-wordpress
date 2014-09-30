@@ -110,6 +110,10 @@ define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
 
+if( strlen(getenv("SUNRISE")) > 0 ) {
+    define('SUNRISE', getenv("SUNRISE"));
+}
+
 
 /* That's all, stop editing! Happy blogging. */
 
